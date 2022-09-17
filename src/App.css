@@ -1,0 +1,400 @@
+.html{
+  scroll-behavior: smooth;
+}
+
+.title{
+  position: relative;
+  padding-top: 1rem;
+  font-weight: bolder;
+  text-align: center;    
+}
+
+.social-media-icons div{
+  text-align: none;
+}
+
+/*Navigation Bar */
+
+.navBar{
+  position: fixed;
+  overflow: hidden;
+  color: blue;
+  z-index: 1;
+}
+
+.navBar .nav{
+  font-size: 1.25rem;
+}
+
+.navBar .nav .icon{
+  display: none;
+}
+
+@media screen and (min-width: 200px) {    
+  .navBar .nav{
+      text-align: center;
+  }   
+}
+
+/* End */
+
+/* Home Section */
+
+.Home{
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+
+.Home .homeBackground{
+  position: relative;
+  height: calc(40rem);
+  z-index: -1;
+}
+
+.Home .content .info{
+  color:black;
+  position: absolute;
+  text-align: center;
+  top: 24%;
+  font-family: Verdana;
+  z-index: 0;
+}
+
+.Home .content .info p{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: red;
+    font-family:'Times New Roman';
+}
+
+.Home .content .info h1{
+  color: blue;
+}
+
+.Home .content .info h1 span{
+  color: black;
+}
+
+.Home .content .info h3{
+  color: orange;
+  font-weight: bold;
+}
+
+
+/* End */
+
+/* About Section */
+
+.About{
+  position: relative;
+  height: auto;
+  width: 100%;
+  background-color: #EBF5FB;
+  font-family: "Brush Script MT";
+  z-index: 0;
+}
+
+.About .title p{
+  color: blue;
+}
+
+.About .content{
+  padding-top: 2rem;
+  text-align: left;
+}
+
+.About .content .image{
+  padding-bottom: 2rem; 
+  z-index: 0;
+}
+
+.About .content h1{
+  color: orange;
+}
+.About .content h1 span{
+  color: red;
+}
+
+.About .content h5{ 
+  white-space: nowrap;
+  color: red;
+}
+
+.About .content p{
+  color: blue;
+}
+
+.About .content .info{
+  padding-bottom: calc(10% - 1rem);
+  white-space: nowrap;
+}
+
+.About .content .info span{
+  color: orange;
+}
+
+@media only screen and (max-width: 600px){
+  .About .content .info{
+      font-size: 0.81rem;
+  }
+}
+
+/* End */
+
+/* Education Section */
+.Education{
+  position: relative;
+  height: calc(50% + 40rem);
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 0;
+}
+
+.Education .content{
+  padding-left: calc(10%);
+  padding-right: calc(10%);
+  padding-top: calc(1rem);
+}
+
+.Education .content .row{
+  text-align: none;
+}
+
+.Education .content .row .card{
+  box-shadow: 0 0.3rem 0.3rem lightblue;
+  transition: all 0.3s ease-in-out;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+}
+.Education .content .row .card:hover{
+  position: relative;
+  box-shadow: 0 0.3rem 0.5rem navy;
+  transition: all 0.3s ease-in-out;
+}
+.Education .content .row .card .cardimage{
+  width: 25%;
+}
+
+.Education .content .row:hover{
+  text-align: none;
+}
+
+.Education .content .row .icon{
+  border-width: 2rem;
+  width: 16rem;
+  display: flexbox;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.Education .content .row .info{
+  display: flexbox; 
+  text-align: left;   
+}
+
+.Education .content .row .info h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.Education .content .row .info p{
+  font-size: 1.3rem;
+  color: maroon;
+}
+
+.Education .content .row .info h4{
+  font-size: 1.2rem;
+  color: orangered;
+}
+
+.Education .content .row .icon input{
+  display: flex;
+  margin-right: auto;
+  width: 70%;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 900px) {
+  .Education .content .row .card{
+      display: flex;
+      flex-direction: column;
+  }
+  .Education .content .row .card .cardimage{
+      width:auto;
+  }
+  .Education .content .row .card .info{
+      text-align: center;
+  }   
+}
+
+
+/* End */
+
+/* Project Section */
+
+.Projects{
+  position: relative;
+  height: calc(50% - 40rem);
+  width: 100%;
+  background-color: white;
+  z-index: 0;
+}
+
+.Projects .content{
+  padding-left: calc(10%);
+  padding-right: calc(10%);
+  padding-top: calc(1rem);
+  padding-bottom: 2rem;
+}
+
+.Projects .content .small-screen{
+  display: none;
+}
+
+.Projects .content .linebreak{
+  display: none;
+}
+
+.Projects .content .rowbreak{
+  padding-bottom: 1.5rem;
+  display: block;
+}
+
+.Projects .content .square{
+  height: 0.5rem;
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+  border-style:solid;
+  border-radius: 1.5rem;
+}
+
+.Projects .content .square.first.r1.c1{
+  background-image: url("./../src/assets/images/Project1.jpg");
+  background-size: 100%;   
+}
+
+.Projects .content .square.second.r1.c2{
+  background-image: url("./../src/assets/images/Project2.jpg");
+  background-size: 100%;
+}
+
+.Projects .content .square.third.r1.c3{
+  background-image: url("./../src/assets/images/Project3.jpg");
+  background-size: 100%;
+}
+
+.Projects .content .square p{
+  display: none;
+}
+
+.Projects .content .square:hover{
+  position: relative;
+  border: 2rem black;
+}
+
+.Projects .content .square .button{
+  display: none;
+}
+
+.Projects .content .square:hover .button{
+  position: relative;
+  display: flex;
+  top: -3rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .Projects .content{
+      padding-bottom: 4rem;
+  }
+  .Projects .content .small-screen{
+      display: block;
+  }
+  .Projects .content .large-screen{
+      display: none;
+  }
+  .Projects .content .small-screen .square{
+      width: auto;
+      border: solid black;
+  }
+  .Projects .content .small-screen .square:hover .button{
+      position: relative;
+      display: flex;
+      top: -4rem;
+      justify-content: center;
+  }
+  .carousel-control-next-icon{
+      color: black;
+  }
+  /*
+  .Projects .content .card{
+      width: auto;
+  }
+  .Projects .content .square{
+      width: auto;
+      padding-top: 100%;
+      background-size: 100%;
+      text-align: none;
+  }
+  .Projects .content .linebreak{
+      display: block;
+      padding-bottom: 1.5rem;
+  }
+  .Projects .content .rowbreak{
+      display: block;
+  }
+  */
+}
+
+/* End */
+
+/* Contact Section */
+
+.Contacts{
+  position: relative;
+  height: calc(50% - 40rem);
+  width: 100%;
+  background-color: #FDEDEC;
+  z-index: 0;
+  padding-bottom: 2rem;
+}
+
+.Contacts .content{
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
+
+.Contacts .content .formgroup{
+  padding-bottom: 1.2rem;
+}
+
+@media only screen and (max-width: 900px){
+  .Contacts .content{
+      margin-left: calc(10%);
+      margin-right: calc(10%);
+  }
+}
+
+/* End */
+
+/* Footer Section */
+
+.Footer{
+  position: relative;
+  height: calc(50% - 40rem);
+  width: 100%;
+  background-color: navy;
+  z-index: 0;
+  border: solid navy;
+}
+
+.Footer .title{
+  color: whitesmoke;
+}
+/*End */

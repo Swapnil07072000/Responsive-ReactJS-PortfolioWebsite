@@ -106,6 +106,7 @@
 
 .About .content .image{
   padding-bottom: 2rem; 
+  background-color: transparent;
   z-index: 0;
 }
 
@@ -269,21 +270,6 @@
   display: block;
   border-style:solid;
   border-radius: 1.5rem;
-}
-
-.Projects .content .square.first.r1.c1{
-  background-image: url("./../src/assets/images/Project1.jpg");
-  background-size: 100%;   
-}
-
-.Projects .content .square.second.r1.c2{
-  background-image: url("./../src/assets/images/Project2.jpg");
-  background-size: 100%;
-}
-
-.Projects .content .square.third.r1.c3{
-  background-image: url("./../src/assets/images/Project3.jpg");
-  background-size: 100%;
 }
 
 .Projects .content .square p{

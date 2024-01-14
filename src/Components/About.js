@@ -2,9 +2,24 @@ import { Component, React } from 'react';
 import { Container, Row, Col, Image} from 'react-bootstrap';
 import { FaUser } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image1 from './../assets/images/ContactUs.jpg';
+import about_info from './../assets/jsonFiles/aboutInfo.json';
+import images from './images.js';
+
 
 class About extends Component{
+    
+    
+    getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
     render(){
         return(
             <section id="About">
@@ -17,33 +32,31 @@ class About extends Component{
                             <Row fluid="true">
                                 <Col sm>
                                     <div>
-                                        <Image className="image" fluid="md" src={Image1} rounded>
+                                        <Image className="image" fluid="md" src={images[about_info.aboutus_img_id]} rounded>
                                         </Image>
                                     </div>
                                 </Col>
                                 <Col sm>
                                     <div>
                                         <Container fluid>
-                                            <h1><span>I'm</span> Swapnil Pawar</h1>
-                                            <h5>Fresher</h5>
-                                            <p>Currently in final year of Masters in I.T pursuing from Mumbai University.
-                                                 Adaptive, enthusiastic to learn new things that will not only be beneficial
-                                                 for the company but also will help me achieve company as well as my dreams.</p>
+                                            <h1>{about_info.name}</h1>
+                                            <h5>{about_info.exp_status}</h5>
+                                            <p></p>
                                         </Container>
                                     </div>
                                     <div className="info">
                                         <Container fluid>
                                             <Row sm>
-                                                <Col sm> <span>Age</span> : 22 </Col>
+                                                <Col sm> <span>Age</span> : {this.getAge(about_info.dob)} </Col>
                                             </Row>
                                             <Row sm>
-                                                <Col sm> <span>Email Id</span> : swapniluttampawar2007@gmail.com </Col>
+                                                <Col sm> <span>Email Id</span> : {about_info.email} </Col>
                                             </Row>
                                             <Row sm>
-                                                <Col sm> <span>Phone No.</span> : +91 9137609330 </Col>
+                                                <Col sm> <span>Phone No.</span> : {about_info.phone_no} </Col>
                                             </Row>
                                             <Row sm>
-                                                <Col sm> <span>Address</span> : Mumbai - 55, India </Col>
+                                                <Col sm> <span>Address</span> : {about_info.address} </Col>
                                             </Row>
                                         </Container>
                                     </div>

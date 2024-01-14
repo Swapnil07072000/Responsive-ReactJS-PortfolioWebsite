@@ -1,0 +1,18 @@
+{
+    "0":{
+        "degree_name": "Master of Science in Information Technology",
+        "college_name": "M.L. Dahanukar College of Commerce | MU",
+        "college_img_id": "college_img_0",
+        "year_from": "2021",
+        "year_to": "2023",
+        "degree_status": "Completed"
+    },
+    "1":{
+        "degree_name": "Bachelor of Science in Information Technology",
+        "college_name": "M.L. Dahanukar College of Commerce | MU",
+        "college_img_id": "college_img_1",
+        "year_from": "2018",
+        "year_to": "2021",
+        "degree_status": "Completed"
+    }
+}

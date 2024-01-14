@@ -4,17 +4,20 @@ import {loadFull} from 'tsparticles';
 import { Container } from 'react-bootstrap';
 import Typed from 'react-typed';
 import {FaGithub, FaLinkedin} from 'react-icons/fa';
+import socialmedia_info from './../assets/jsonFiles/socialMediaInfo.json';
+import typed_info from './../assets/jsonFiles/typedInfo.json';
 
 class Home extends Component{
     render(){
         const particlesInit = async (main) => {
-            console.log(main);
+            //console.log(main);
             await loadFull(main);
         };
     
         const particlesLoaded = (container) => {
-            console.log(container);
+            //console.log(container);
         };
+        
         return(
             <section id="Home">
                 <div className="Home">
@@ -107,19 +110,18 @@ class Home extends Component{
                             <h1><span>I'm</span> Swapnil Pawar  </h1>
                             <h3><span>I am into </span><br/>
                                 <Typed 
-                                    strings={['Frontend Developement','Backend Development', 
-                                            'Web Development', 'Mobile Development']} 
+                                    strings={typed_info["typed_info"]} 
                                     typeSpeed={40}
                                     backSpeed={50}
                                     loop
                                 ></Typed>
                             </h3>
                             <div className="social-media-icons title">
-                                <a href="https://github.com/Swapnil07072000" target="_blank" rel="noreferrer">
+                                <a href={socialmedia_info["github_link"]} target="_blank" rel="noreferrer">
                                     <FaGithub size="35"></FaGithub>
                                 </a>
                                 &nbsp;&nbsp;&nbsp;
-                                <a href="https://www.linkedin.com/in/swapnil-pawar-07/" target="_blank" rel="noreferrer">
+                                <a href={socialmedia_info["linkedin_link"]} target="_blank" rel="noreferrer">
                                     <FaLinkedin size="35"></FaLinkedin>
                                 </a>
                             </div>

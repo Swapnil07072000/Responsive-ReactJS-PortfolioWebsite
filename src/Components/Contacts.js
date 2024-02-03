@@ -1,9 +1,16 @@
 import { Component, React } from 'react';
 import { Container, Row, Col, Form, Button, Image} from 'react-bootstrap';
 import {FaHeadset, FaPaperPlane} from 'react-icons/fa';
-import Image1 from './../assets/images/ContactUs.jpg';
+import images from './images.js';
 
 class Contacts extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            validated: false,
+            setValidated: false
+        };
+    }
     render(){
         return(
             <section id="Contacts">
@@ -16,22 +23,22 @@ class Contacts extends Component{
                             <Row sm>
                                 <Col sm>
                                     <div className="formgroup">
-                                        <Image fluid src={Image1} alt="No Image Found"></Image>
+                                        <Image fluid src={images.contact_us} alt="No Image Found"></Image>
                                     </div>
                                 </Col>
                                 <Col sm>
                                     <Form fluid="true">
                                         <Form.Group className="formgroup">
-                                            <Form.Control type="text" id="fname" placeholder="First Name"></Form.Control>
+                                            <Form.Control type="text"  placeholder="First Name" required></Form.Control>
                                         </Form.Group>
                                         <Form.Group className="formgroup">
-                                            <Form.Control type="text" id="lname" placeholder="Last Name"></Form.Control>
+                                            <Form.Control type="text" id="lname" placeholder="Last Name" required></Form.Control>
                                         </Form.Group>
                                         <Form.Group className="formgroup">
-                                            <Form.Control type="text" id="email" placeholder="Email"></Form.Control>
+                                            <Form.Control type="email" id="email" placeholder="Email" required></Form.Control>
                                         </Form.Group>
                                         <Form.Group className="formgroup">
-                                            <Form.Control type="text" id="phoneno" placeholder="Phone No."></Form.Control>
+                                            <Form.Control type="text" id="phoneno" placeholder="Phone No." required></Form.Control>
                                         </Form.Group>
                                         <Form.Group className="formgroup">
                                             <Form.Control style={{resize: "none"}} as="textarea" id="txtarea" placeholder="Comment"></Form.Control>

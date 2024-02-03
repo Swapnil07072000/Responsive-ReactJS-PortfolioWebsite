@@ -17,14 +17,17 @@ class Projects extends Component{
                 };
                 project_cols.push(
                     (
-                        <Col sm>
-                            <div className={tmp_className} style={style_}>
+                        <>
+                        <Col sm  key={key+key_1}>
+                            <div className={tmp_className} style={style_}> 
                                 <p>Sqaure</p>
                                 <div  className="button">
                                     <Button variant="primary" target="_blank" href={value_1["project_img_url"]}>Github Repo</Button> 
                                 </div>
                             </div>
                         </Col>
+                        <br/>
+                        </>
                     )
                 )
             })

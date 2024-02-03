@@ -12,8 +12,8 @@ class Education extends Component{
         Object.entries(education_info).map(([key, value], index) => { 
            
             education_div.push(
-                (
-                    <Row fluid="true" className="row">
+                (   <>
+                    <Row fluid="true" className="row" key={key}>
                         <Col sm>
                             <Card fluid="true" className="card">
                                 <CardImg src={images[value['college_img_id']]} className="cardimage">
@@ -28,7 +28,8 @@ class Education extends Component{
                             </Card>
                         </Col>
                     </Row>
-
+                    <br/>
+                    </>
                 )
             )
         })
